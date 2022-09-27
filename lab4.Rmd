@@ -2,9 +2,12 @@
 title: "Lab 4 - Introduction to RStudio and R Markdown. Presentations"
 output:
   html_document:
-    toc: true
-editor_options: 
-  markdown: 
+    toc: yes
+    df_print: paged
+  html_notebook:
+    toc: yes
+editor_options:
+  markdown:
     wrap: 72
 ---
 
@@ -96,7 +99,15 @@ but it should have an output).
 Ensure that you can render/knit the document after you add that chunk.
 ```
 
-YOUR ANSWER GOES HERE
+#### Code chunk to add two numbers
+
+```{r , echo=TRUE}
+
+a <- 10
+b <- 5
+print(a + b)
+
+```
 
 ```{block, type="alert alert-info"}
 #### Question 3
@@ -109,7 +120,15 @@ Don't forget to knit/render the document
 after you make this change to ensure everything is still working.
 ```
 
-YOUR ANSWER GOES HERE
+#### Code Chunk to multiply two numbers
+
+```{r , echo=TRUE}
+
+x = 5
+y = 3
+print (x * y)
+
+```
 
 ```{block, type="alert alert-info"}
 #### Question 4
@@ -119,7 +138,22 @@ Create a new code chunk that uses a code chunk option.
 Write out in your own words what the code chunk option is doing.
 ```
 
-YOUR ANSWER GOES HERE
+#### Code Chunk showing Radius vs Area of Circle relationship and chunk options
+
+```{r echo=TRUE, message=TRUE, results='markup', collapse=TRUE}
+r <- c(0.5, 1, 1.5, 2.0, 2.5)
+area <- 2*pi*r^2
+plot(r, area,xlab = 'Radius', ylab = 'Area',type = 'l', main = 'Radius vs Area plot')
+```
+
+echo: (True/False) This option allows us to display the source code in
+the output. A value of 'True' shows the code and 'False hides the code.
+
+results: This converts the text output to markup output format based on
+the appropriate environments.
+
+collapse: (True/False), to collapse the source and output into one block
+when possible select True.
 
 #### Multiple code chunk options
 
