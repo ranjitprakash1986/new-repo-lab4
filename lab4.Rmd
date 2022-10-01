@@ -3,11 +3,13 @@ title: "Lab 4 - Introduction to RStudio and R Markdown. Presentations"
 author: "Ranjitprakash Sundaramurthi"
 date: "Oct 1, 2022"
 output:
-  html_notebook:
-    toc: yes
   html_document:
     toc: yes
     df_print: paged
+  pdf_document:
+    toc: yes
+  html_notebook:
+    toc: no
 editor_options:
   markdown:
     wrap: 72
@@ -148,14 +150,32 @@ area <- 2*pi*r^2
 plot(r, area,xlab = 'Radius', ylab = 'Area',type = 'l', main = 'Radius vs Area plot')
 ```
 
+This code chunk is to compute and plot the change in area of a circle
+with radius. The following code chunk options are used.
+
 echo: (True/False) This option allows us to print the source code to be
 evaluated. A value of 'True' shows the R code and 'False' hides the R
-code. Here TRUE is chosen and hence the source code as well as the plot
-are seen in the knitted output .
+code. Above, TRUE is chosen and hence the source code as well as the
+plot are seen in the knitted output . When ECHO is false, the source
+code is not shown but any evaluation is displayed as below.
+
+```{r alternateecho, eval=TRUE, echo=FALSE}
+r <- c(0.5, 1, 1.5, 2.0, 2.5)
+area <- 2*pi*r^2
+plot(r, area,xlab = 'Radius', ylab = 'Area',type = 'l', main = 'Radius vs Area plot')
+```
 
 eval: (True/False), False is used when we want to show the code but do
-not want it to run while knitting the markdown. Here, I want to compute
-the plot and hence eval is selected as TRUE.
+not want it to run while knitting the markdown. Above, I want to compute
+the plot and hence eval is selected as TRUE. When eval is False we can
+see the code as text but no computation is performed, hence the plot is
+not visible as seen below.
+
+```{r alternateeval, eval=FALSE, echo=TRUE}
+r <- c(0.5, 1, 1.5, 2.0, 2.5)
+area <- 2*pi*r^2
+plot(r, area,xlab = 'Radius', ylab = 'Area',type = 'l', main = 'Radius vs Area plot')
+```
 
 #### Multiple code chunk options
 
@@ -181,14 +201,46 @@ a*b
 
 ```
 
-The include and highlight code chunk options are used here:
+The include and results code chunk options are used here:
 
 Include: (TRUE/FALSE) This option allows us to include or exclude the
 chunk output in the outputted document. Here as it is indicated as TRUE,
-the result of the multiplication (2000) is shown as output.
+the result of the multiplication (2000) is shown as output. Below when
+include is set to FALSE, code and output are not shown as seen in the
+code chunk below (this is not visible in the knitted html).
 
-results: (markup/asis) This option allows us to control how to display
-the results.
+```{r alternateinclude, include=FALSE}
+a <- 20
+b <- 100
+a*b
+```
+
+results: (markup/asis/hold/hide) This option allows us to control the
+format of display of the results. Here the results is displayed as a
+markup format. Below is the format with 'asis' and 'hide'
+
+```{r alternateresults1, include=TRUE, results='asis'}
+a <- 20
+b <- 100
+a*b
+```
+
+```{r alternateresults2, include=TRUE, results='hide'}
+a <- 20
+b <- 100
+a*b
+
+```
+
+error: TRUE/FALSE. This is a code chunk option to display or hide errors
+in the code. This is seen below. When it is TRUE we can see the error
+message and the document is knitted successfully with the Error message.
+When Error is set to False, the errors are not displayed.
+
+```{r option1, error=TRUE}
+
+int(a)
+```
 
 ### 1.5. YAML Header and document output options
 
@@ -236,7 +288,7 @@ Include what you added below here as well as a fenced Markdown code block.
 ```
 
 ```{block, type="alert alert-info"}
----
+
 title: "Lab 4 - Introduction to RStudio and R Markdown. Presentations"
 author: "Ranjitprakash Sundaramurthi"
 date: "Oct 1, 2022"
@@ -249,8 +301,6 @@ output:
 editor_options:
   markdown:
     wrap: 72
----
-
 ```
 
 ### Creating R Markdown documents
@@ -333,8 +383,9 @@ rubric={mechanics:6}
 
 1.  See the document links below for the answer.
 
+```{=html}
 <!-- -->
-
+```
 2.  **Rmd Links:**
     <https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86/blob/master/Computing_area_perimeter.Rmd>
 

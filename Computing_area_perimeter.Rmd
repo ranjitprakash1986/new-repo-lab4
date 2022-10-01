@@ -2,7 +2,7 @@
 title: "Sample HTML document"
 author: "Ranjitprakash Sundaramurthi"
 date: "2022-10-01"
-output: "html_document"
+output: "github_document"
 ---
 
 ```{r setup, include=FALSE}

@@ -1,0 +1,643 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Lab 4 - Introduction to RStudio and R Markdown. Presentations},
+  pdfauthor={Ranjitprakash Sundaramurthi},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Lab 4 - Introduction to RStudio and R Markdown. Presentations}
+\author{Ranjitprakash Sundaramurthi}
+\date{Oct 1, 2022}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+In Lab 4, you will learn how to use, edit and create a R Markdown
+document (like this one) using RStudio. You should follow the
+instructions in this document to complete the assignment. Knit this
+document to view the nicely rendered HTML, which can make it easier to
+read the questions.
+
+If you need help as you use R Markdown in this lab and others in the
+future, consult the following resources:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://rmarkdown.rstudio.com/lesson-15.html}{Cheat sheet}
+\item
+  \href{https://rmarkdown.rstudio.com/docs/}{Home page with guides}
+\item
+  \href{https://bookdown.org/yihui/rmarkdown/}{Reference book}
+\end{itemize}
+
+The below is a code chunk, but instead of using the \texttt{r} engine
+we're creating and alert block that will make the question show up with
+a blue background in the HTML output. Unfortunately, this creates and
+error when exporting to PDF, so it can only be used for HTML.
+
+\begin{alert alert-info}
+\hypertarget{submission-instructions}{%
+\subsection{Submission Instructions}\label{submission-instructions}}
+
+rubric=\{mechanics:2\}
+
+You receive mark for submitting your lab correctly, please follow these
+instructions:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://ubc-mds.github.io/resources_pages/general_lab_instructions/}{Follow
+  the general lab instructions}.
+\item
+  \href{https://github.com/UBC-MDS/public/tree/master/rubric}{Click here
+  to view a description of the rubrics used to grade the questions}.
+\item
+  Push your \texttt{.Rmd} AND \textbf{all the files} you will create as
+  part of the lab to your GitHub repository.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The reason for pushing all the files is that \texttt{.Rmd} does not
+    contain the rendered output from running the cells. If someone is
+    checking out your work there needs to be an HTML file to view the
+    output, so it is good to get into this habit. - \texttt{.ipynb}
+    renders nicely on GitHub, which is why we did not include the HTML
+    file for previous labs.
+  \end{itemize}
+\item
+  Upload a \texttt{.Rmd} version of your assignment to Gradescope.
+\item
+  Include a clickable link to your GitHub repo for the lab just below
+  this cell (it should look something like this
+  \url{https://github.ubc.ca/MDS-2022-23/DSCI_521_labX_yourcwl}.
+\end{itemize}
+\end{alert alert-info}
+
+\url{https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86}
+
+\hypertarget{editing-r-markdown-documents}{%
+\subsection{Editing R Markdown
+documents}\label{editing-r-markdown-documents}}
+
+This document is called an R Markdown document. It is a literate code
+document, similar to Jupyter notebooks where you can write code and view
+its outputs. To start, let's set our working directory by creating a new
+R Project for lab 4.
+
+\hypertarget{text-and-rendering-r-markdown-documents}{%
+\subsubsection{Text and rendering R Markdown
+documents}\label{text-and-rendering-r-markdown-documents}}
+
+In a R Markdown document any line of text not in a code chunk (like this
+line of text) will be formatted using Markdown. Similar to JupyterLab,
+you can also use HTML and LaTeX here to do more advanced formatting. To
+run a code chunk, you can press the green play button in the top right
+corner of the chunk.
+
+\begin{alert alert-info}
+\hypertarget{question-1}{%
+\paragraph{Question 1}\label{question-1}}
+
+rubric=\{correctness:1\}
+
+To render the HTML files we are going to create, the first step is to
+activate GitHub pages.
+\end{alert alert-info}
+
+\href{https://ranjitprakash1986.github.io/new-repo-lab4/}{\textbf{https://ranjitprakash1986.github.io/new-repo-lab4/}}
+
+\begin{alert alert-info}
+\hypertarget{question-2}{%
+\paragraph{Question 2}\label{question-2}}
+
+rubric=\{mechanics:1\}
+
+Create a new code chunk below using the r language engine that runs some
+R code (it does not need to be complicated, but it should have an
+output). Ensure that you can render/knit the document after you add that
+chunk.
+\end{alert alert-info}
+
+\hypertarget{code-chunk-to-add-two-numbers}{%
+\paragraph{Code chunk to add two
+numbers}\label{code-chunk-to-add-two-numbers}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a }\OtherTok{\textless{}{-}} \DecValTok{10}
+\NormalTok{b }\OtherTok{\textless{}{-}} \DecValTok{5}
+\FunctionTok{print}\NormalTok{(a }\SpecialCharTok{+}\NormalTok{ b)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 15
+\end{verbatim}
+
+\begin{alert alert-info}
+\hypertarget{question-3}{%
+\paragraph{Question 3}\label{question-3}}
+
+rubric=\{mechanics:1\}
+
+Create a new code chunk, and add a meaningful name to the code chunk.
+Try using the pop-up-like menu to navigate between the named code chunks
+Don't forget to knit/render the document after you make this change to
+ensure everything is still working.
+\end{alert alert-info}
+
+\hypertarget{code-chunk-to-multiply-two-numbers}{%
+\paragraph{Code Chunk to multiply two
+numbers}\label{code-chunk-to-multiply-two-numbers}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OtherTok{=} \DecValTok{5}
+\NormalTok{y }\OtherTok{=} \DecValTok{3}
+\FunctionTok{print}\NormalTok{ (x }\SpecialCharTok{*}\NormalTok{ y)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 15
+\end{verbatim}
+
+\begin{alert alert-info}
+\hypertarget{question-4}{%
+\paragraph{Question 4}\label{question-4}}
+
+rubric=\{mechanics:1,reasoning:1\}
+
+Create a new code chunk that uses a code chunk option. Write out in your
+own words what the code chunk option is doing.
+\end{alert alert-info}
+
+\hypertarget{code-chunk-showing-radius-vs-area-of-circle-relationship-and-chunk-options}{%
+\paragraph{Code Chunk showing Radius vs Area of Circle relationship and
+chunk
+options}\label{code-chunk-showing-radius-vs-area-of-circle-relationship-and-chunk-options}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{r }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\FloatTok{0.5}\NormalTok{, }\DecValTok{1}\NormalTok{, }\FloatTok{1.5}\NormalTok{, }\FloatTok{2.0}\NormalTok{, }\FloatTok{2.5}\NormalTok{)}
+\NormalTok{area }\OtherTok{\textless{}{-}} \DecValTok{2}\SpecialCharTok{*}\NormalTok{pi}\SpecialCharTok{*}\NormalTok{r}\SpecialCharTok{\^{}}\DecValTok{2}
+\FunctionTok{plot}\NormalTok{(r, area,}\AttributeTok{xlab =} \StringTok{\textquotesingle{}Radius\textquotesingle{}}\NormalTok{, }\AttributeTok{ylab =} \StringTok{\textquotesingle{}Area\textquotesingle{}}\NormalTok{,}\AttributeTok{type =} \StringTok{\textquotesingle{}l\textquotesingle{}}\NormalTok{, }\AttributeTok{main =} \StringTok{\textquotesingle{}Radius vs Area plot\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{lab4_files/figure-latex/Answer4-1.pdf}
+
+echo: (True/False) This option allows us to print the source code to be
+evaluated. A value of `True' shows the R code and `False' hides the R
+code. Here TRUE is chosen and hence the source code as well as the plot
+are seen in the knitted output .
+
+eval: (True/False), False is used when we want to show the code but do
+not want it to run while knitting the markdown. Here, I want to compute
+the plot and hence eval is selected as TRUE.
+
+\hypertarget{multiple-code-chunk-options}{%
+\paragraph{Multiple code chunk
+options}\label{multiple-code-chunk-options}}
+
+To have multiple code chunk options you separate them by a comma. For
+example, if in addition to suppressing warnings, we want to run the code
+but not output the results, then we can add the
+\texttt{include\ =\ FALSE} argument to the code chunk after the
+\texttt{warning\ =\ FALSE} option.
+
+\begin{alert alert-info}
+\hypertarget{question-5}{%
+\paragraph{Question 5}\label{question-5}}
+
+rubric=\{mechanics:1,reasoning:1\}
+
+Create a new code chunk that uses at least two code chunk options. At
+least one must be different to the ones mentioned above. Write in your
+own words what each code chunk option is doing.
+\end{alert alert-info}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a }\OtherTok{\textless{}{-}} \DecValTok{20}
+\NormalTok{b }\OtherTok{\textless{}{-}} \DecValTok{100}
+\NormalTok{a}\SpecialCharTok{*}\NormalTok{b}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 2000
+\end{verbatim}
+
+The include and highlight code chunk options are used here:
+
+Include: (TRUE/FALSE) This option allows us to include or exclude the
+chunk output in the outputted document. Here as it is indicated as TRUE,
+the result of the multiplication (2000) is shown as output.
+
+results: (markup/asis) This option allows us to control how to display
+the results.
+
+\hypertarget{yaml-header-and-document-output-options}{%
+\subsubsection{1.5. YAML Header and document output
+options}\label{yaml-header-and-document-output-options}}
+
+R Markdown files contains three types of content:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Plain text mixed with simple Markdown formatting.
+\item
+  Code chunks surrounded by ```.
+\item
+  An (optional) YAML header surrounded by \texttt{-\/-\/-}.
+\end{enumerate}
+
+You have been introduced the first two types of content, but not the
+third (although you probably saw it at the top of this document). The
+(optional) YAML header, which is located at the very top of R Markdown
+files sets some general global parameters, including:
+
+\begin{itemize}
+\tightlist
+\item
+  title
+\item
+  author
+\item
+  output
+\item
+  etc
+\end{itemize}
+
+\textbf{Example YAML Header}
+
+\begin{verbatim}
+---
+title: "Reproducible Data Science Report"
+author: "Florencia D'Andrea"
+date: "September 4, 2022"
+output: html_document
+---
+\end{verbatim}
+
+Most important from a workflow perspective is \textbf{output}. Possible
+output options include:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{output:\ html\_document}
+\item
+  \texttt{output:\ md\_document}
+\item
+  \texttt{output:\ pdf\_document}
+\item
+  \texttt{output:\ word\_document}
+\item
+  \texttt{output:\ xaringan::moon\_reader} (xaringan presentation -
+  html)
+\end{itemize}
+
+\begin{alert alert-info}
+\hypertarget{question-6}{%
+\paragraph{Question 6}\label{question-6}}
+
+rubric=\{mechanics:1\}
+
+Navigate to the YAML header at the very top of this document and edit it
+so that you include an \texttt{author} (yourself) and a \texttt{date}
+(lab due date). Include what you added below here as well as a fenced
+Markdown code block.
+\end{alert alert-info}
+
+\begin{alert alert-info}
+
+\end{alert alert-info}
+
+\hypertarget{creating-r-markdown-documents}{%
+\subsubsection{Creating R Markdown
+documents}\label{creating-r-markdown-documents}}
+
+You can use the ``File'' menu inside RStudio to create new R Markdown
+documents by selecting: \textbf{File \textgreater{} New File
+\textgreater{} R Markdown} This will bring you to another menu where you
+can choose the type of output (don't be afraid to pick something, you
+can always change the \texttt{output} type once you have the
+\texttt{.Rmd} file).
+
+To create a written report, we generally recommend using the default
+\texttt{output:\ html\_document} as it is easier to read than PDF (note
+- LaTeX does not render nicely in such documents sadly, so if you are
+using a lot of LaTeX then you may want to choose
+\texttt{output:\ pdf\_document}). If you want to create an \texttt{.md}
+file to publish on GitHub, it is recommend to instead use
+\texttt{output:\ github\_document}. To get this from the menu above you
+need to navigate to the ``From Template'' option on the left panel and
+then select ``GitHub Document (Markdown)''.
+
+\begin{alert alert-info}
+\hypertarget{question-7}{%
+\paragraph{Question 7}\label{question-7}}
+
+rubric=\{mechanics:2\}
+
+1 - Create a new RMarkdown report (a different file than this one) in
+the same directory as this RMarkdown file. Use \texttt{html\_document}
+as the \texttt{output}. After you have rendered it, paste the link to
+the HTML output as a link to your GitHub repository (remember to push
+all your files!)
+
+2 - Then, navigate to the YAML header at the very top of that
+\texttt{.Rmd} document and edit it so that the \texttt{output} is
+\texttt{pdf\_document}. Then knit/render the document. Note the
+different output. Add and commit that rendered both the \texttt{.html}
+and \texttt{.pdf} files to the GitHub repository for this lab and paste
+the two links below this question.
+\end{alert alert-info}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \url{https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86/blob/master/Sample_HTML_Document.html}
+\end{enumerate}
+
+(OR)
+\url{https://github.com/ranjitprakash1986/new-repo-lab4/blob/master/Sample_HTML_Document.html}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+  \textbf{PDF Links:}
+  \url{https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86/blob/master/Sample_HTML_Document.pdf}
+
+  (OR)
+  \url{https://github.com/ranjitprakash1986/new-repo-lab4/blob/master/Sample_HTML_Document.pdf}
+
+  \textbf{HTML Links:}
+  \url{https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86/blob/master/Sample_HTML_Document.html}
+
+  (OR)
+  \url{https://github.com/ranjitprakash1986/new-repo-lab4/blob/master/Sample_HTML_Document.html}
+
+  \textbf{RMD Links:}
+  \url{https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86/blob/master/Sample_HTML_Document.Rmd}
+
+  (OR)
+  \url{https://github.com/ranjitprakash1986/new-repo-lab4/blob/master/Sample_HTML_Document.Rmd}
+\end{enumerate}
+
+\begin{alert alert-info}
+\hypertarget{question-8}{%
+\paragraph{Question 8}\label{question-8}}
+
+rubric=\{mechanics:6\}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Go back to the \texttt{.Rmd} file you created in question 7, and
+  include at least two Markdown text sections (each should have a
+  header) and at least two separate code chunks in it (these can be
+  really simple). Save the new R Markdown document and give it a new
+  meaningful name.
+\item
+  Render/knit the new R Markdown document to get an \texttt{.html} file.
+  Put the \texttt{.Rmd} document and the rendered \texttt{.html} file
+  under version control using Git, and push/upload the file to your
+  GitHub repository for this homework. Paste a link to these files as
+  your answer below.
+\end{enumerate}
+\end{alert alert-info}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  See the document links below for the answer.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+  \textbf{Rmd Links:}
+  \url{https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86/blob/master/Computing_area_perimeter.Rmd}
+
+  (OR)
+  \url{https://github.com/ranjitprakash1986/new-repo-lab4/blob/master/Computing_area_perimeter.Rmd}
+
+  \textbf{Html Links:}
+  \url{https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86/blob/master/Computing_area_perimeter.html}
+
+  (OR)
+  \url{https://github.com/ranjitprakash1986/new-repo-lab4/blob/master/Computing_area_perimeter.html}
+\end{enumerate}
+
+\begin{alert alert-info}
+\hypertarget{question-9-optional}{%
+\paragraph{Question 9 (Optional)}\label{question-9-optional}}
+
+rubric=\{mechanics:1,reasoning:1\}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Take the R Markdown report created in Question 8 and change the output
+  to \texttt{github\_document} and render it. Put the rendered
+  \texttt{.md} file under version control using Git, and push/upload the
+  file to your GitHub repository for this homework. Try to look at the
+  file on GitHub.ubc.ca in your homework repo? What do you see? How is
+  it rendered?
+\end{enumerate}
+\end{alert alert-info}
+
+\textbf{md Links:}
+\url{https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86/blob/master/Computing_area_perimeter.md}
+
+(OR)
+\url{https://github.com/ranjitprakash1986/new-repo-lab4/blob/master/Computing_area_perimeter.md}
+
+The file is rendered for viewing in the github repository directly. It
+closely follows the appearance of a html page with slight differences in
+the font. On the other hand the HTML version of the document is not
+rendered directly on the repo, it shows the inherent html code when
+opened.
+
+\begin{alert alert-info}
+\hypertarget{question-10}{%
+\paragraph{Question 10}\label{question-10}}
+
+rubric=\{mechanics:6\}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Create a presentation using RStudio. Do this in a different file than
+  this one but in the same directory as this RMarkdown file. You can use
+  xaringan or Quarto to create the slides.
+  \href{https://pages.github.ubc.ca/MDS-2022-23/DSCI_521_platforms-dsci_students/materials/lectures/8-rmarkdown-quarto-slides-ghpages.html}{On
+  the book} you will find links that will guide you on how to create
+  each type of slide. If you are not sure which one to use, it is safer
+  to use Xaringan as Quarto is quite new and you will have to learn how
+  to use \texttt{.qmd} files. But if you want to explore Quarto, we will
+  accept both options (Xaringan or Quarto slides) as correct. Give this
+  file a meaningful name.
+\item
+  Create at least 4 slides. At least two slides must include a code
+  chunk or cell (these can be really simple). Save the new document.
+\item
+  Render/knit the new document to get a \texttt{html} presentation file.
+\item
+  Put the new document and the rendered \texttt{.html} file under
+  version control using Git, and push/upload the file to your GitHub
+  repository for this lab
+\item
+  Activate GitHub pages and paste the link below.
+\end{enumerate}
+\end{alert alert-info}
+
+\textbf{Github page:}
+
+\url{https://ranjitprakash1986.github.io/new-repo-lab4/Math_operators.html\#1}
+
+\textbf{RMDLinks:}
+\url{https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86/blob/master/Math_operators.Rmd}
+
+(OR)
+\url{https://github.com/ranjitprakash1986/new-repo-lab4/blob/master/Math_operators.Rmd}
+
+\textbf{HTML Links:}
+\url{https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86/blob/master/Math_operators.html}
+
+(OR)
+\url{https://github.com/ranjitprakash1986/new-repo-lab4/blob/master/Math_operators.html}
+
+\begin{alert alert-info}
+\hypertarget{challenging-question-11}{%
+\paragraph{(Challenging) Question 11}\label{challenging-question-11}}
+
+rubric=\{reasoning\}
+
+In a paragraph or two, compare and contrast the use of reproducible
+tools (e.g., R Markdown and Jupyter) and non-reproducible tools (Word,
+Powerpoint, Keynote, etc) for presentations and reports. Include
+advantages and disadvantages for each.
+\end{alert alert-info}
+
+YOUR ANSWER GOES HERE
+
+\end{document}
