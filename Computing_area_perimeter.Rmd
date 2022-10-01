@@ -1,0 +1,73 @@
+---
+title: "Sample HTML document"
+author: "Ranjitprakash Sundaramurthi"
+date: "2022-10-01"
+output: "html_document"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Answer 8
+
+## Calculating the Area and Perimeter of a Circle
+```{block}
+The Area of a circle is calculated by multiplying pi with the square of the radius. Pi is equivalent to 3.14 and the radius is the distance of each point on the circle from its center. The perimeter is calculated as double the product of pi and radius 
+
+Below are code chunks to calculate the area and perimeter of circle with radius r. 
+```
+
+```{r CircleArea, echo=TRUE}
+r <- 10
+p <- 3.14
+
+circle_area <- p*r^2
+circle_area
+```
+```{r Circleperimeter, echo=TRUE}
+circle_perimeter = 2*p*r
+circle_perimeter
+```
+
+## Calculating the Area and Perimeter of a Square
+```{block}
+Unlike a Circle which can be considered to have infinite sides, a square has only 4 sides. The area of a square is calculated by multiplying the length of 2 of its adjacent sides. The perimeter of a square is calculated as twice the sum of the length of its adjacent sides.
+
+Below are code chunks to calculate the area and perimeter of a square with sides c and d.
+```
+
+```{r SquareArea, echo=TRUE}
+
+c <- 10
+d <- 20
+
+square_area <- c*d
+square_area
+```
+
+```{r SquarePerimeter, echo=TRUE}
+square_perimeter <- 2*(c+d)
+square_perimeter
+```
+
+## Default template for Markdowns below - Untouched
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
