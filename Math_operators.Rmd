@@ -1,0 +1,104 @@
+---
+title: "Operations in Maths"
+subtitle: "A dive into understanding basic operators"
+author: "Ranjitprakash Sundaramurthi"
+institute: "MDS, UBC"
+date: "2022/10/1 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+class: center, middle
+
+# Slides created using xaringan
+
+### Email: ranjit86@student.ubc.ca
+
+---
+class: inverse, center, middle
+
+# Mathematical Operators
+
+---
+
+# Basic Operations: Addition and Subtraction
+
+The addition and subtraction are performed using the + and - operators. These are placed between two integer or float variable for computation.
+
+```{r Addition, eval=TRUE, echo=TRUE}
+a <- 5
+b <- 3
+
+addition <- a+b
+addition
+```
+
+```{r Subtraction, echo=TRUE, eval=TRUE}
+subtraction <- a-b
+subtraction
+
+```
+
+---
+# Basic Operations: Multiplication and Division
+
+Multiplication and Division are performed using the * and / operators. These are placed between two integer or float variable for computation.
+
+```{r Multiplication, echo=TRUE, eval=TRUE}
+
+c <- 6
+d <- 3
+
+multiplication <- c*d
+multiplication
+```
+
+```{r Division, echo=TRUE, eval=TRUE}
+
+division <- c/d
+division
+```
+
+---
+# Other Operations: Modulo
+
+Modulo returns the remainder after division is performed and is accessed using %% operator. This is placed between two integer or float variable for computation.
+
+```{r Modulo, echo=TRUE, eval=TRUE}
+
+e <- 6
+f <- 3
+
+modulo <- c %% d
+modulo
+```
+
+---
+background-image: url(https://92campus.com/wp-content/uploads/2020/08/maxresdefault.jpg)
+background-position: 50% 50%
+class: center, bottom, inverse
+
+# Now it gets complicated, not really!!
+
+---
+
+# Order of execution
+
+When multiple operators are used in an equation, the order of computation is done by using the BODMAS rule, which stands for Brackets, Of, Division, Multiplication, Addition, Subtraction.
+
+Using the above information, compute the following and email me the answer
+
+```{r Exerecise, eval=FALSE, echo=TRUE}
+answer<- a*(b*c)-e*d+(a-b)-d
+answer
+```
+
+---
+
+class: inverse, middle, center
+
+# Thank You
