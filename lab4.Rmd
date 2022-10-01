@@ -357,6 +357,9 @@ and paste the two links below this question.
     (OR)
     <https://github.com/ranjitprakash1986/new-repo-lab4/blob/master/Sample_HTML_Document.html>
 
+    (OR) rendered:
+    <https://ranjitprakash1986.github.io/new-repo-lab4/Sample_HTML_Document.html>
+
     **RMD Links:**
     <https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86/blob/master/Sample_HTML_Document.Rmd>
 
@@ -383,9 +386,8 @@ rubric={mechanics:6}
 
 1.  See the document links below for the answer.
 
-```{=html}
 <!-- -->
-```
+
 2.  **Rmd Links:**
     <https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86/blob/master/Computing_area_perimeter.Rmd>
 
@@ -397,6 +399,9 @@ rubric={mechanics:6}
 
     (OR)
     <https://github.com/ranjitprakash1986/new-repo-lab4/blob/master/Computing_area_perimeter.html>
+
+    (OR) rendered:
+    <https://ranjitprakash1986.github.io/new-repo-lab4/Computing_area_perimeter.html>
 
 ```{block, type="alert alert-info"}
 #### Question 9 (Optional)
