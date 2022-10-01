@@ -290,7 +290,28 @@ to the GitHub repository for this lab
 and paste the two links below this question.
 ```
 
-YOUR ANSWER GOES HERE
+1.  <https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86/blob/master/Sample_HTML_Document.html>
+
+(OR)
+<https://github.com/ranjitprakash1986/new-repo-lab4/blob/master/Sample_HTML_Document.html>
+
+2.  **PDF Links:**
+    <https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86/blob/master/Sample_HTML_Document.pdf>
+
+    (OR)
+    <https://github.com/ranjitprakash1986/new-repo-lab4/blob/master/Sample_HTML_Document.pdf>
+
+    **HTML Links:**
+    <https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86/blob/master/Sample_HTML_Document.html>
+
+    (OR)
+    <https://github.com/ranjitprakash1986/new-repo-lab4/blob/master/Sample_HTML_Document.html>
+
+    **RMD Links:**
+    <https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86/blob/master/Sample_HTML_Document.Rmd>
+
+    (OR)
+    <https://github.com/ranjitprakash1986/new-repo-lab4/blob/master/Sample_HTML_Document.Rmd>
 
 ```{block, type="alert alert-info"}
 #### Question 8
@@ -307,9 +328,24 @@ rubric={mechanics:6}
    and the rendered `.html` file under version control using Git,
    and push/upload the file to your GitHub repository for this homework.
    Paste a link to these files as your answer below.
+  
 ```
 
-YOUR ANSWER GOES HERE
+1.  See the document links below for the answer.
+
+<!-- -->
+
+2.  **Rmd Links:**
+    <https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86/blob/master/Computing_area_perimeter.Rmd>
+
+    (OR)
+    <https://github.com/ranjitprakash1986/new-repo-lab4/blob/master/Computing_area_perimeter.Rmd>
+
+    **Html Links:**
+    <https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86/blob/master/Computing_area_perimeter.html>
+
+    (OR)
+    <https://github.com/ranjitprakash1986/new-repo-lab4/blob/master/Computing_area_perimeter.html>
 
 ```{block, type="alert alert-info"}
 #### Question 9 (Optional)
@@ -323,7 +359,17 @@ rubric={mechanics:1,reasoning:1}
    What do you see? How is it rendered?
 ```
 
-YOUR ANSWER GOES HERE
+**md Links:**
+<https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86/blob/master/Computing_area_perimeter.md>
+
+(OR)
+<https://github.com/ranjitprakash1986/new-repo-lab4/blob/master/Computing_area_perimeter.md>
+
+The file is rendered for viewing in the github repository directly. It
+closely follows the appearance of a html page with slight differences in
+the font. On the other hand the HTML version of the document is not
+rendered directly on the repo, it shows the inherent html code when
+opened.
 
 ```{block, type="alert alert-info"}
 #### Question 10
@@ -350,7 +396,21 @@ rubric={mechanics:6}
 5. Activate GitHub pages and paste the link below.
 ```
 
-YOUR ANSWER GOES HERE
+**Github page:**
+
+<https://ranjitprakash1986.github.io/new-repo-lab4/Math_operators.html#1>
+
+**RMDLinks:**
+<https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86/blob/master/Math_operators.Rmd>
+
+(OR)
+<https://github.com/ranjitprakash1986/new-repo-lab4/blob/master/Math_operators.Rmd>
+
+**HTML Links:**
+<https://github.ubc.ca/MDS-2022-23/DSCI_521_lab4_ranjit86/blob/master/Math_operators.html>
+
+(OR)
+<https://github.com/ranjitprakash1986/new-repo-lab4/blob/master/Math_operators.html>
 
 ```{block, type="alert alert-info"}
 #### (Challenging) Question 11
