@@ -1,11 +1,11 @@
 ---
 title: "Lab 4 - Introduction to RStudio and R Markdown. Presentations"
 output:
+  html_notebook:
+    toc: yes
   html_document:
     toc: yes
     df_print: paged
-  html_notebook:
-    toc: yes
 editor_options:
   markdown:
     wrap: 72
@@ -101,7 +101,7 @@ Ensure that you can render/knit the document after you add that chunk.
 
 #### Code chunk to add two numbers
 
-```{r , echo=TRUE}
+```{r Answer2, echo=TRUE}
 
 a <- 10
 b <- 5
@@ -122,7 +122,7 @@ after you make this change to ensure everything is still working.
 
 #### Code Chunk to multiply two numbers
 
-```{r , echo=TRUE}
+```{r Answer3, echo=TRUE}
 
 x = 5
 y = 3
@@ -140,20 +140,20 @@ Write out in your own words what the code chunk option is doing.
 
 #### Code Chunk showing Radius vs Area of Circle relationship and chunk options
 
-```{r echo=TRUE, message=TRUE, results='markup', collapse=TRUE}
+```{r Answer4, echo=TRUE, eval= TRUE}
 r <- c(0.5, 1, 1.5, 2.0, 2.5)
 area <- 2*pi*r^2
 plot(r, area,xlab = 'Radius', ylab = 'Area',type = 'l', main = 'Radius vs Area plot')
 ```
 
-echo: (True/False) This option allows us to display the source code in
-the output. A value of 'True' shows the code and 'False hides the code.
+echo: (True/False) This option allows us to print the source code to be
+evaluated. A value of 'True' shows the R code and 'False' hides the R
+code. Here TRUE is chosen and hence the source code as well as the plot
+are seen in the knitted output .
 
-results: This converts the text output to markup output format based on
-the appropriate environments.
-
-collapse: (True/False), to collapse the source and output into one block
-when possible select True.
+eval: (True/False), False is used when we want to show the code but do
+not want it to run while knitting the markdown. Here, I want to compute
+the plot and hence eval is selected as TRUE.
 
 #### Multiple code chunk options
 
@@ -171,7 +171,22 @@ At least one must be different to the ones mentioned above.
 Write in your own words what each code chunk option is doing.
 ```
 
-YOUR ANSWER GOES HERE
+```{r Answer5, include = TRUE, results = 'markup'}
+a <- 20
+b <- 100
+a*b
+
+
+```
+
+The include and highlight code chunk options are used here:
+
+Include: (TRUE/FALSE) This option allows us to include or exclude the
+chunk output in the outputted document. Here as it is indicated as TRUE,
+the result of the multiplication (2000) is shown as output.
+
+results: (markup/asis) This option allows us to control how to display
+the results.
 
 ### 1.5. YAML Header and document output options
 
