@@ -1,8 +1,8 @@
 ---
-title: "HTML document"
+title: "Sample HTML document"
 author: "Ranjitprakash Sundaramurthi"
 date: "2022-10-01"
-output: html_document
+output: "pdf_document"
 ---
 
 ```{r setup, include=FALSE}
